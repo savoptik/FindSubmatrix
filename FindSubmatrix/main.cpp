@@ -7,9 +7,10 @@
 //
 
 #include <iostream>
+#include "MainMatrix.hpp"
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    MainMatrix debugMatrix;
+    debugMatrix.print();
     return 0;
 }
