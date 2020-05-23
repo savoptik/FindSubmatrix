@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		FE6106FF24702EE200A8FDF8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE6106FE24702EE200A8FDF8 /* main.cpp */; };
-		FE6107092470317600A8FDF8 /* EnyMAtrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE6107082470317600A8FDF8 /* EnyMAtrix.cpp */; };
+		FE6107092470317600A8FDF8 /* EnyMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE6107082470317600A8FDF8 /* EnyMatrix.cpp */; };
 		FE61070C2470392500A8FDF8 /* MainMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE61070A2470392500A8FDF8 /* MainMatrix.cpp */; };
+		FEA09D4C247977BF00D69DDB /* SubMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEA09D4A247977BF00D69DDB /* SubMatrix.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,10 +29,12 @@
 		FE4E04B9247089FA00894DA7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FE6106FB24702EE200A8FDF8 /* FindSubmatrix */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FindSubmatrix; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE6106FE24702EE200A8FDF8 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		FE61070624702F2A00A8FDF8 /* EnyMAtrix.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = EnyMAtrix.hpp; sourceTree = "<group>"; };
-		FE6107082470317600A8FDF8 /* EnyMAtrix.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EnyMAtrix.cpp; sourceTree = "<group>"; };
+		FE61070624702F2A00A8FDF8 /* EnyMatrix.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = EnyMatrix.hpp; sourceTree = "<group>"; };
+		FE6107082470317600A8FDF8 /* EnyMatrix.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EnyMatrix.cpp; sourceTree = "<group>"; };
 		FE61070A2470392500A8FDF8 /* MainMatrix.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MainMatrix.cpp; sourceTree = "<group>"; };
 		FE61070B2470392500A8FDF8 /* MainMatrix.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MainMatrix.hpp; sourceTree = "<group>"; };
+		FEA09D4A247977BF00D69DDB /* SubMatrix.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SubMatrix.cpp; sourceTree = "<group>"; };
+		FEA09D4B247977BF00D69DDB /* SubMatrix.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SubMatrix.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,11 +68,13 @@
 		FE6106FD24702EE200A8FDF8 /* FindSubmatrix */ = {
 			isa = PBXGroup;
 			children = (
+				FE6107082470317600A8FDF8 /* EnyMatrix.cpp */,
+				FE61070624702F2A00A8FDF8 /* EnyMatrix.hpp */,
 				FE6106FE24702EE200A8FDF8 /* main.cpp */,
-				FE61070624702F2A00A8FDF8 /* EnyMAtrix.hpp */,
-				FE6107082470317600A8FDF8 /* EnyMAtrix.cpp */,
 				FE61070A2470392500A8FDF8 /* MainMatrix.cpp */,
 				FE61070B2470392500A8FDF8 /* MainMatrix.hpp */,
+				FEA09D4A247977BF00D69DDB /* SubMatrix.cpp */,
+				FEA09D4B247977BF00D69DDB /* SubMatrix.hpp */,
 			);
 			path = FindSubmatrix;
 			sourceTree = "<group>";
@@ -132,8 +137,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE6106FF24702EE200A8FDF8 /* main.cpp in Sources */,
+				FEA09D4C247977BF00D69DDB /* SubMatrix.cpp in Sources */,
 				FE61070C2470392500A8FDF8 /* MainMatrix.cpp in Sources */,
-				FE6107092470317600A8FDF8 /* EnyMAtrix.cpp in Sources */,
+				FE6107092470317600A8FDF8 /* EnyMatrix.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +196,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/local/include/;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib/;
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -242,6 +250,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/local/include/;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib/;
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -255,6 +265,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3KRK236DU7;
 				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = /usr/local/include/;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib/;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -265,6 +277,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3KRK236DU7;
 				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = /usr/local/include/;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib/;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

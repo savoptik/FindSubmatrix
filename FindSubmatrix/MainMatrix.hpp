@@ -9,17 +9,19 @@
 #ifndef MainMatrix_hpp
 #define MainMatrix_hpp
 
-#include "EnyMAtrix.hpp"
+#include "EnyMatrix.hpp"
+#include "SubMatrix.hpp"
 
-class MainMatrix : public EnyMAtrix {
-   
+class MainMatrix : public EnyMatrix {
+   CellType *cells;
     
 public:
     MainMatrix();
     MainMatrix(const UInt m, const UInt n = 0, const UInt d = 0);
-    EnyMAtrix row(const UInt);
-    EnyMAtrix col(const UInt);
-    EnyMAtrix laer(const UInt);
+    virtual const CellType at(const UInt i, const UInt j, const UInt k);
+    SubMatrix row(const UInt);
+    SubMatrix col(const UInt);
+    SubMatrix laer(const UInt);
     ~MainMatrix();
 };
 

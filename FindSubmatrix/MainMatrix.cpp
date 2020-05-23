@@ -18,7 +18,6 @@ MainMatrix::MainMatrix(const unsigned int m, const unsigned int n, const unsigne
 }
 
 MainMatrix::MainMatrix() { 
-    EnyMAtrix();
     fRows = 3;
     fCols = 3;
     fDeps = 3;
@@ -32,5 +31,7 @@ MainMatrix::~MainMatrix() {
     delete [] cells;
 }
 
-
+const CellType MainMatrix::at(const UInt i, const UInt j, const UInt k) {
+    return cells[cellIndex(i, j, k)];
+}
 
